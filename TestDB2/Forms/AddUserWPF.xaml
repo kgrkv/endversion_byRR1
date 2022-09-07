@@ -1,0 +1,66 @@
+﻿<Window x:Class="TestDB2.Forms.AddUserWPF"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestDB2.Forms"
+        mc:Ignorable="d"
+        Title="AddUserWPF" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal"
+                >
+                <Label Margin="5" >Укажите имя пользователя</Label>
+                <TextBox
+                    MinWidth="150"
+                    Margin="5" Name="tbName">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                >
+                <Label Margin="5" >Укажите возраст пользователя</Label>
+                <TextBox
+                    MinWidth="150"
+                    Margin="5" Name="tbAge">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                >
+                <Label Margin="5" >Укажите пол  пользователя</Label>
+                <ComboBox Margin="5"
+                          Name="cbGender"
+                          MinWidth="150"
+                          ></ComboBox>
+            </StackPanel>
+            <Button Name="btAddUser"  Click="btAddUser_Click"
+                Margin="5" Padding="5" HorizontalAlignment="Center"
+                >Добавить  пользователя в БД</Button>
+
+            <Button Name="btAddRange" Click="btDown_Click"
+                      Margin="5" Padding="5" HorizontalAlignment="Center"
+                    >Вернуться в  стартовое  окно</Button>
+
+            <StackPanel Orientation="Horizontal"
+                >
+                <Label Margin="5" >Укажите кол-во
+                    пользователей для авто заполнения</Label>
+                <TextBox
+                    MinWidth="150"
+                    Margin="5" Name="tbCount">
+                </TextBox>
+            </StackPanel>
+
+            <Button Name="btDown" Click="btAddRange_Click"
+                      Margin="5" Padding="5" HorizontalAlignment="Center"
+                    >Добавить  много  пользователей </Button>
+
+            <Button Name="btClear" Click="btClear_Click"
+                      Margin="5" Padding="5" HorizontalAlignment="Center"
+                    >Очистить  БД </Button>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
